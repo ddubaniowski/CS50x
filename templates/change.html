@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Zmiana Hasła
+{% endblock %}
+
+{% block main %}
+    <form action="/change" method="post">
+        <div class="form-group">
+            <input type="password" name="current" placeholder="Obecne hasło" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" placeholder="Nowe hasło" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="password" name="confirmation" placeholder="Powtórz nowe hasło" class="form-control">
+        </div>
+        <button class="btn btn-primary" type="submit">Zmień Hasło</button>
+    </form>
+{% endblock %}

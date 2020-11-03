@@ -1,0 +1,184 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Generuj
+{% endblock %}
+
+{% block main %}
+    <form action="/wheel" method="post">
+        <div class="form-group">
+          <label for="staticEmail2" class="sr-only">Kariera</label>
+          <input type="text" name="opt1" style="text-align:center" readonly class="form-control-plaintext" id="staticEmail2" value="Kariera">
+          <input id="slider1" name = "val1" class="border-0" type="range" min="0" max="10" value="5"/>
+          <script>
+              $(document).ready(function() {
+
+                const $valueSpan = $('.valueSpan1');
+                const $value = $('#slider1');
+                $valueSpan.html($value.val());
+                $value.on('input change', () => {
+
+                  $valueSpan.html($value.val());
+                });
+              });
+           </script>
+           <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan1"></span>
+         </div>
+
+         <div class="form-group">
+              <label for="staticEmail2" class="sr-only">Zdrowie</label>
+              <input type="text" name="opt2" style="text-align:center" readonly class="form-control-plaintext" id="staticEmail2" value="Zdrowie">
+
+            <input id="slider2" name = "val2" class="border-0" type="range" min="0" max="10" value="5"/>
+            <script>
+                $(document).ready(function() {
+
+                  const $valueSpan = $('.valueSpan2');
+                  const $value = $('#slider2');
+                  $valueSpan.html($value.val());
+                  $value.on('input change', () => {
+
+                    $valueSpan.html($value.val());
+                  });
+                });
+             </script>
+             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan2"></span>
+            </div>
+
+            <div class="form-group">
+
+                <label for="staticEmail2" class="sr-only">Duchowość</label>
+                <input type="text" name="opt3" style="text-align:center" readonly class="form-control-plaintext" id="staticEmail2" value="Duchowość">
+
+
+              <input id="slider3" name = "val3" class="border-0" type="range" min="0" max="10" value="5"/>
+              <script>
+                  $(document).ready(function() {
+
+                    const $valueSpan = $('.valueSpan3');
+                    const $value = $('#slider3');
+                    $valueSpan.html($value.val());
+                    $value.on('input change', () => {
+
+                      $valueSpan.html($value.val());
+                    });
+                  });
+               </script>
+               <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan3"></span>
+             </div>
+
+         <div class="form-group">
+
+              <label for="staticEmail2" class="sr-only">Emocje</label>
+              <input type="text" name="opt4" style="text-align:center" readonly class="form-control-plaintext" id="staticEmail2" value="Emocje">
+
+
+            <input id="slider4" name = "val4" class="border-0" type="range" min="0" max="10" value="5"/>
+            <script>
+                $(document).ready(function() {
+
+                  const $valueSpan = $('.valueSpan4');
+                  const $value = $('#slider4');
+                  $valueSpan.html($value.val());
+                  $value.on('input change', () => {
+
+                    $valueSpan.html($value.val());
+                  });
+                });
+             </script>
+             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan4"></span>
+            </div>
+
+        <div class="form-group">
+
+          <label for="staticEmail2" class="sr-only">Rozrywka</label>
+          <input type="text" name="opt5" style="text-align:center" readonly class="form-control-plaintext" id="staticEmail2" value="Rozrywka">
+
+
+        <input id="slider5" name = "val5" class="border-0" type="range" min="0" max="10" value="5"/>
+        <script>
+            $(document).ready(function() {
+
+              const $valueSpan = $('.valueSpan5');
+              const $value = $('#slider5');
+              $valueSpan.html($value.val());
+              $value.on('input change', () => {
+
+                $valueSpan.html($value.val());
+              });
+            });
+         </script>
+         <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan5"></span>
+         </div>
+
+         <div class="form-group">
+
+              <label for="staticEmail2" class="sr-only">Rozwój</label>
+              <input type="text" name="opt6" style="text-align:center" readonly class="form-control-plaintext" id="staticEmail2" value="Rozwój">
+
+
+            <input id="slider6" name = "val6" class="border-0" type="range" min="0" max="10" value="5"/>
+            <script>
+                $(document).ready(function() {
+
+                  const $valueSpan = $('.valueSpan6');
+                  const $value = $('#slider6');
+                  $valueSpan.html($value.val());
+                  $value.on('input change', () => {
+
+                    $valueSpan.html($value.val());
+                  });
+                });
+             </script>
+             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan6"></span>
+            </div>
+
+        <div class="form-group">
+
+          <label for="staticEmail2" class="sr-only">Relacje</label>
+          <input type="text" name="opt7" style="text-align:center" readonly class="form-control-plaintext" id="staticEmail2" value="Relacje">
+
+
+        <input id="slider7" name = "val7" class="border-0" type="range" min="0" max="10" value="5"/>
+        <script>
+            $(document).ready(function() {
+
+              const $valueSpan = $('.valueSpan7');
+              const $value = $('#slider7');
+              $valueSpan.html($value.val());
+              $value.on('input change', () => {
+
+                $valueSpan.html($value.val());
+              });
+            });
+         </script>
+         <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan7"></span>
+         </div>
+
+         <div class="form-group">
+
+              <label for="staticEmail2" class="sr-only">Rodzina</label>
+              <input type="text" name="opt8" style="text-align:center" readonly class="form-control-plaintext" id="staticEmail2" value="Rodzina">
+
+            <input id="slider8" name = "val8" class="border-0" type="range" min="0" max="10" value="5"/>
+            <script>
+                $(document).ready(function() {
+
+                  const $valueSpan = $('.valueSpan8');
+                  const $value = $('#slider8');
+                  $valueSpan.html($value.val());
+                  $value.on('input change', () => {
+
+                    $valueSpan.html($value.val());
+                  });
+                });
+             </script>
+             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan8"></span>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Generuj</button>
+         </div>
+    </form>
+
+{% endblock %}

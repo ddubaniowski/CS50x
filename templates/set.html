@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Ustaw
+{% endblock %}
+
+{% block main %}
+    <form action="/set" method="post">
+
+        <div class="form-group">
+            <input type="text" name="Kariera" style="text-align:center" readonly class="form-control-plaintext" value="Kariera">
+            <input type="text" name="kariera" placeholder="Dodaj cel..." autocomplete="off" autofocus class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="Zdrowie" style="text-align:center" readonly class="form-control-plaintext" value="Zdrowie">
+            <input type="text" name="zdrowie" placeholder="Dodaj cel..." autocomplete="off" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="Duchowość" style="text-align:center" readonly class="form-control-plaintext" value="Duchowość">
+            <input type="text" name="duchowość" placeholder="Dodaj cel..." autocomplete="off" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="Emocje" style="text-align:center" readonly class="form-control-plaintext" value="Emocje">
+            <input type="text" name="emocje" placeholder="Dodaj cel..." autocomplete="off" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="Rozrywka" style="text-align:center" readonly class="form-control-plaintext" value="Rozrywka">
+            <input type="text" name="rozrywka" placeholder="Dodaj cel..." autocomplete="off" autofocus class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="Rozwój" style="text-align:center" readonly class="form-control-plaintext" value="Rozwój">
+            <input type="text" name="rozwój" placeholder="Dodaj cel..." autocomplete="off" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="Relacje" style="text-align:center" readonly class="form-control-plaintext" value="Relacje">
+            <input type="text" name="relacje" placeholder="Dodaj cel..." autocomplete="off" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="Rodzina" style="text-align:center" readonly class="form-control-plaintext" value="Rodzina">
+            <input type="text" name="rodzina" placeholder="Dodaj cel..." autocomplete="off" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Aktualizuj</button>
+         </div>
+    </form>
+{% endblock %}

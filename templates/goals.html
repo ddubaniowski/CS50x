@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Cele
+{% endblock %}
+
+{% block main %}
+    <table class="table table-hover">
+      <thead class="table-primary">
+        <tr>
+          <th scope="col">Obszar życia</th>
+          <th scope="col">Cel</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for i in labels %}
+        {% set label = labels[loop.index-1] %}
+        {% set goal = goals[loop.index-1] %}
+        <tr>
+          <th scope="row">{{ label }}</th>
+          <td>{{ goal }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}
