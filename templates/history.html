@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th scope="col">Stock</th>
+              <th scope="col">Price</th>
+              <th scope="col">Number</th>
+              <th scope="col">Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <th scope="row">{{ row["stock"] }}</th>
+                <td>{{ row["price"] }} USD</td>
+                <td>{{ row["number"] }}</td>
+                <td>{{ row["datetime"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

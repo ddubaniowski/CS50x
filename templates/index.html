@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+              <th scope="col">Stock</th>
+              <th scope="col">No.</th>
+              <th scope="col">Current Price</th>
+              <th scope="col">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-info">
+                <th scope="row">WALLET</th>
+                <td>-</td>
+                <td>-</td>
+                <td>{{ '%0.2f' % cash }} USD</td>
+            </tr>
+            {% for row in rows %}
+            <tr>
+                {% set symbol = row["stock"] %}
+                {% set number = holdings[symbol] %}
+                {% set price = quotes[symbol] %}
+                {% set value = number * price %}
+                <th scope="row">{{ symbol }}</th>
+                <td>{{ number }}</td>
+                <td>{{ price }} USD</td>
+                <td>{{ value }} USD</td>
+            </tr>
+            {% endfor %}
+            <tr class="table-active">
+                <th scope="row">TOTAL</th>
+                <td>-</td>
+                <td>-</td>
+                <td>{{ '%0.2f' % (total + cash) }} USD</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

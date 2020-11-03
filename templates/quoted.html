@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <div>
+        <h3>The latest stock price for {{ quote["name"] }} ({{ quote["symbol"] }}) is {{ quote["price"] }} USD.</h3>
+    </div>
+{% endblock %}
